@@ -3,31 +3,124 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --gradient-color-1: #000000;
+  --gradient-color-2: #5f5686;
+  --gradient-color-3: #bfbccb;
+  --gradient-color-4: #000000;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: auto;
+  font-family: var(--font-josefin-sans), sans-serif;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    270deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  background-size: 800% 800%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #fff;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gradient-color-4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-color-2);
+  border-radius: 10px;
+  border: 3px solid var(--gradient-color-4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-color-3);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--gradient-color-1);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gradient-color-2) var(--gradient-color-4);
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: var(--gradient-color-4);
+}
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px; /* For horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gradient-color-4); /* Dark background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-color-2); /* Lighter gradient color */
+  border-radius: 10px;
+  border: 3px solid var(--gradient-color-4); /* Padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-color-3); /* Change color on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--gradient-color-1);
+}
+
+/* Hide scrollbar arrow buttons */
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gradient-color-2) var(--gradient-color-4);
+}
+
+/* For corner of the scrollbar */
+*::-webkit-scrollbar-corner {
+  background-color: var(--gradient-color-4);
 }

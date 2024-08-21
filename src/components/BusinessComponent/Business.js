@@ -93,7 +93,8 @@ export default function Business() {
   return (
     <div className="w-full p-4 flex flex-col gap-10">
       <h2 className="text-[45px] md:text-[60px] lg:text-[75px] leading-none font-thin text-center">
-        We're Digital Alchemists on a mission to Elevate Businesses Worldwide
+        We&apos;re Digital Alchemists on a mission to Elevate Businesses
+        Worldwide
       </h2>
       <h4 className="text-[14px] md:text-[18px] font-thin text-center">
         In the fast-paced & immersive digital world of today, Fluxatic Global is

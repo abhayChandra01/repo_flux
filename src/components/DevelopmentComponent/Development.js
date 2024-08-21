@@ -13,7 +13,7 @@ export default function Development() {
         <div className="w-full flex flex-col md:flex-row">
           <div className="md:w-[50%] w-full pr-4">
             <h4 className="text-[14px] md:text-[18px] font-thin">
-              Fluxatic Global's IT Solutions empower businesses to succeed
+              Fluxatic Global&apos;s IT Solutions empower businesses to succeed
               online. Our expertly crafted and customised solutions are tailored
               to individual businesses with their unique identity & business
               processes, designed to increase conversion rates, operational

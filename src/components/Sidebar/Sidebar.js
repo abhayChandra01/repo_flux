@@ -10,12 +10,12 @@ export default function Sidebar({ isSidebarOpen, toggleSidebar }) {
       {isSidebarOpen && (
         <motion.div
           key="sidebar"
-          className="fixed top-0 right-0 h-[calc(100vh-16px)] md:h-[calc(100vh-32px)] w-[calc(100vw-16px)] md:!w-[40%] bg-[#0E0E0E] text-white shadow-lg z-[50] m-2 md:m-4 rounded-[32px]"
+          className="fixed top-0 right-0 w-[calc(100vw-16px)] md:!w-[40%] bg-[#0E0E0E] text-white shadow-lg m-2 md:m-4 rounded-[32px]"
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
           transition={{
-            duration: 0.6, // Smooth duration for entry and exit
+            duration: 0.6,
             ease: [0.4, 0, 0.2, 1],
           }}
         >
@@ -43,7 +43,7 @@ export default function Sidebar({ isSidebarOpen, toggleSidebar }) {
               elevate your brand presence & increase operational efficiency.
             </h4>
 
-            <div className="mt-auto space-y-4">
+            <div className="space-y-4">
               <div>
                 <a
                   href="mailto:business@fluxatic.com"
